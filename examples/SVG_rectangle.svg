@@ -1,6 +1,0 @@
-<svg width='160' height='160'>
-        <rect x='0' y='0' width='160' height='160' fill='red'/>
-        <text x='0' y='0' font-size="60" fill="white">
-            <tspan x="16.5" y="104">SVG</tspan>
-        </text>
-    </svg>
