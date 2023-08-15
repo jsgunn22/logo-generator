@@ -38,7 +38,7 @@ function init() {
     let fill = a.fill;
     let shapeCode;
     let textSize = 60;
-    let textPosition;
+    let textPosition; // configures the position of text based on the shape selected
 
     let shape = questions[2].choices;
 
@@ -52,7 +52,7 @@ function init() {
         const rectangle = new shapes.Rectangle(fill);
         shapeCode = rectangle.render();
         textPosition = `x="0" y="0"`;
-        name = `<tspan x="16.5" y="104">${name}</tspan>`;
+        name = `<tspan x="86.5" y="124">${name}</tspan>`;
         break;
       case shape[2]:
         const triangle = new shapes.Triangle(fill);
@@ -64,13 +64,14 @@ function init() {
     }
 
     fs.writeFile(
-      `./examples/${fileName}.svg`,
-      `<svg width='160' height='160'>
-        ${shapeCode}
-        <text ${textPosition} font-size="${textSize}" fill="${textColor}">
-        ${name}
-         </text>
-        </svg>`,
+      `./examples/${fileName}_logo.svg`,
+      `<?xml version="1.0" encoding="UTF-8"?>
+            <svg width='300' height='200' version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                ${shapeCode}
+                <text ${textPosition} font-size="${textSize}" fill="${textColor}">
+                    ${name}
+                </text>
+            </svg>`,
       (err) =>
         err ? console.log(err) : console.log("Saved to examples folder")
     );
