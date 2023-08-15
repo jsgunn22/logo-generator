@@ -1,5 +1,7 @@
 const shapes = require("./lib/shapes.js");
 
-const rect = new shapes.Rectangle(`red`);
+const rect = new shapes.Rectangle(`SVG`, `red`);
+const cir = new shapes.Circle("PIX", "blue");
 
-rect.print(`SVG`);
+rect.print();
+cir.print();
