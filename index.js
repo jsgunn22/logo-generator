@@ -2,14 +2,6 @@ const shapes = require("./lib/shapes.js");
 const inquirer = require("inquirer");
 const fs = require("fs");
 
-// const rect = new shapes.Rectangle(`SVG`, "white", `red`);
-// const cir = new shapes.Circle("PIX", "white", "blue");
-// const tri = new shapes.Triangle("TUC", "white", "green");
-
-// rect.render();
-// cir.render();
-// tri.render();
-
 const questions = [
   {
     type: "input",
