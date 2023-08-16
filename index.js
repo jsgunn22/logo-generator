@@ -2,16 +2,23 @@ const shapes = require("./lib/shapes.js");
 const inquirer = require("inquirer");
 const fs = require("fs");
 
+// question propts to appear in the console.
 const questions = [
   {
     type: "input",
     name: "name",
-    message: "Input 3 characters for your logo.",
+    message: "Input up to 3 characters for your logo.",
+    validate: (name) =>
+      name.length >= 4 ? "That is too many characters" : true,
   },
   {
     type: "input",
     name: "textColor",
     message: "Enter a color name or hexidecimal color code for the text color",
+    validate: (textColor) =>
+      !textColor
+        ? "Enter a color name or hexidecimal color code for the text color"
+        : true,
   },
   {
     type: "list",
@@ -22,7 +29,11 @@ const questions = [
   {
     type: "input",
     name: "fill",
-    message: "Ender a color name or hexidcimal color code for the fill color",
+    message: "Enter a color name or hexidcimal color code for the fill color",
+    validate: (fill) =>
+      !fill
+        ? "Enter a color name or hexidcimal color code for the fill color"
+        : true,
   },
 ];
 
