@@ -37,22 +37,24 @@ const questions = [
   },
 ];
 
+// Initial Application
 function init() {
   let answers = () => inquirer.prompt(questions).then((response) => response);
 
   async function print() {
-    let a = await answers();
+    let a = await answers(); // waits for all prompt responses
 
     let fileName = a.name;
     let name = a.name;
     let textColor = a.textColor;
     let fill = a.fill;
-    let shapeCode;
-    let textSize = 60;
+    let shapeCode; // Injects a specific element w/ properties based on the shape selected
+    let textSize = 60; // configures the text size depending on the shape selected
     let textPosition; // configures the position of text based on the shape selected
 
     let shape = questions[2].choices;
 
+    // switch to return specific shape
     switch (a.shape) {
       case shape[0]:
         const circle = new shapes.Circle(fill);
@@ -74,6 +76,7 @@ function init() {
         break;
     }
 
+    // prints the new file or overwrites existing file in examples dir
     fs.writeFile(
       `./examples/${fileName}_logo.svg`,
       `<?xml version="1.0" encoding="UTF-8"?>
@@ -88,7 +91,7 @@ function init() {
     );
   }
 
-  print();
+  print(); // Calls the funtion to print the file
 }
 
-init();
+init(); // Calls the application when node is ran
