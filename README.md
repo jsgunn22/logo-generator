@@ -1,4 +1,4 @@
-# SVG Generator
+# Logo Generator
 
 An application used to create simple SVG logos based on criteria entered by the user.
 
@@ -24,4 +24,4 @@ No license information for this repo
 
 ## Assets
 
-[Video Walkthrough]() | [Application Repo](https://github.com/jsgunn22/logo-generator)
+[Video Walkthrough](https://drive.google.com/file/d/1Ea0mL_sKxNtqyUf4-Bl3Eh5QFO-l1KrF/view) | [Application Repo](https://github.com/jsgunn22/logo-generator)
