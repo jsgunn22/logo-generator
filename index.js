@@ -65,7 +65,7 @@ function init() {
         const rectangle = new shapes.Rectangle(fill);
         shapeCode = rectangle.render();
         textPosition = `x="0" y="0"`;
-        name = `<tspan x="86.5" y="124">${name}</tspan>`;
+        name = `<tspan x="100" y="124">${name}</tspan>`;
         break;
       case shape[2]:
         const triangle = new shapes.Triangle(fill);
